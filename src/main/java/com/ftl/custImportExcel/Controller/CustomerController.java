@@ -9,7 +9,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/customer")
-@CrossOrigin("http://127.0.0.1:5500/")
 public class CustomerController {
     @Autowired
     private CustomerRepository customerRepository;
@@ -26,7 +25,7 @@ public class CustomerController {
         return customerService.getCustomerById(id);
     }
 
-    @CrossOrigin("http://127.0.0.1:5500/")
+
     @PostMapping("/Create")
     public String createCustomer(@RequestBody Customer customer) {
         customerService.createCustomer(customer);
