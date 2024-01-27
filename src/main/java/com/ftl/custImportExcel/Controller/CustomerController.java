@@ -29,7 +29,7 @@ public class CustomerController {
     @PostMapping("/Create")
     public String createCustomer(@RequestBody Customer customer) {
         customerService.createCustomer(customer);
-        return "Success";
+        return "SUCESS";
     }
 }
 
